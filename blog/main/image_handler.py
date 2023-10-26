@@ -1,5 +1,6 @@
 import os
 from PIL import Image
+
 from flask import current_app
 
 def add_featured_image(upload_image):
