@@ -1,7 +1,8 @@
 from collections.abc import Mapping, Sequence
 from typing import Any
-from flask_wtf import FlaskForm
+
 from wtforms import StringField,SubmitField,ValidationError,TextAreaField,SelectField
+from flask_wtf import FlaskForm
 from wtforms.validators import DataRequired
 from blog.models import BlogCategory
 from flask_wtf.file import FileAllowed,FileField
