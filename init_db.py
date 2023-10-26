@@ -9,6 +9,4 @@ user1=User(email="zawazawagold4649@gmail.com", username="zawa", password="Taichi
 
 
 db.session.add(user1)
-
-
 db.session.commit()
