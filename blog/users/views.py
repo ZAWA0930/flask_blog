@@ -107,7 +107,7 @@ def delete_user(user_id):
     return redirect(url_for('users.user_maintenance'))
 
 @users.route('/<int:user_id>/user_posts')
-@login_required
+#@login_required
 def user_posts(user_id):
     form = BlogSearchForm()
     #ユーザー取得
