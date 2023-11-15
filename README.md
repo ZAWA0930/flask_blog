@@ -13,18 +13,30 @@ flaskとBootstrapを使用した簡易ブログサイトを作成しました。
 パスワードはハッシュ化しているため、管理者にも表示されません。
 # Requirement
 
-
-
-# Installation
-
-
-# Usage
-
+flask==2.0.3
+flask-wtf==0.15.1
+flask_sqlalchemy==2.5.1
+flask_migrate==3.1.0
+flask_login==0.5.0
+pytz==2021.3
+pillow==9.0.1
+werkzeug==2.0.3
+wtforms==2.3.3
+jinja2==3.0.3
+email-validator==1.1.3
+psycopg2==2.9.3
+gunicorn==20.1.0
+itsdangerous==2.1.2
+markupSafe==2.1.1
+click==8.0.4
+requests==2.27.1
+SQLAlchemy==1.4.39
 
 
 # Note
 
-注意点などがあれば書く
+今回はherokuを使用してデプロイしたため、PostgreSQLを使用した。画像を投稿するには、フリー画像等のリンクを使用しないといけない。
+今後の改善点としてMySQLを使用してAWSからデプロイし、画像をファイルから投稿できるようにする。
 
 # Author
 
