@@ -28,10 +28,7 @@ flaskとBootstrapを使用した簡易ブログサイトを作成しました。
 
 # Author
 
-作成情報を列挙する
-
-* 作成者
-* 所属
-* E-mail
+* 作成者:ZAWA0930
+* e-mail:zawazawagold4649@gmail.com
 
 
