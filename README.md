@@ -7,7 +7,8 @@ https://zawa093flaskapp-ae8b269555e9.herokuapp.com/
 
 # DEMO
 サイトのレイアウトは以下の画像の通りです
-![image](https://github.com/ZAWA0930/flask_practice/assets/93305831/f7bbf071-26e6-4210-accd-828c62c8a53b)
+
+![image](https://github.com/ZAWA0930/flask_blog/assets/93305831/49de8486-9df4-4cab-b3a7-8954760c93d7)
 
 
 # Features
