@@ -5,7 +5,9 @@ from blog.main.forms import BlogCategoryForm,UpdateCategoryForm,BlogPostForm,Blo
 from blog import db
 from blog.main.image_handler import add_featured_image
 
+
 main = Blueprint('main',__name__)
+
 
 
 @main.route('/category_maintenance', methods=['GET', 'POST'])
@@ -130,6 +132,10 @@ def update_post(blog_post_id):
 
 
 @main.route('/')
+def open():
+    return render_template('open.html')
+
+@main.route('/start')
 def index():
     form = BlogSearchForm()
     # ブログ記事の取得
@@ -189,3 +195,5 @@ def category_posts(blog_category_id):
 @main.route('/info')
 def info():
     return render_template('info.html')
+
+

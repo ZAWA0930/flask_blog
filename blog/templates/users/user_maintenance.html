@@ -3,9 +3,9 @@
 {% block content %}
 
     <header id="page-header">
-        <div class="container my-3 py-3 bg-dark">
-            <div class="row">
-                <div class="col-md-6 m-auto text-center text-light ">
+        <div class="container my-3 py-3  bg-dark">
+            <div class="row ">
+                <div class="col-md-6 m-auto  text-center text-light ">
 
                     <h1>ユーザー管理</h1>
                 </div>
@@ -15,7 +15,7 @@
 
     {% if current_user.is_administrator() %}
     <section id="menu">
-        <div class="container my-3 py-3 bg-light">
+        <div class="container my-3 py-3 dark-subtle">
             <div class="row">
                 <div class="col-md-3">
                     <a href="{{ url_for('users.register') }}"  class="btn btn-primary w-100">

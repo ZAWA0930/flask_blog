@@ -2,7 +2,7 @@
 
 {% block content %}
     <header id="page-header">
-        <div class="container my-3 bg-light">
+        <div class="container my-3 bg-dark-emphasis">
             <div class="col-md-6 m-auto text-center">
                 {% if blog_category %}
                     <h1 class="fst-italic">{{ blog_category.category }}</h1>
@@ -14,8 +14,11 @@
                     <h1 class="fst-italic">"{{ searchtext }}"の検索結果</h1>
                     <br>
                 {% else %}
-                    <h1 class="fst-italic">ZAWA Blog</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="text-white">
+                        <h1 class="fst-italic">ZAWA Blog</h1>
+                        <p>This is a blog site that I created. Please enjoy it.</p>
+                    </div>
+                    
                 {% endif %}
             </div>
         </div>
@@ -35,7 +38,8 @@
                                 <div class="card-body" style="max-height: 26rem;">
                                     {% if post.featured_image %}
                                     <div class="mb-3" style="text-align: center;">
-                                        <img src="{{ post.featured_image}}" class="img-fluid card-img-top" style="max-height: 10rem;">
+                                        <!-- <img src="{{ url_for('static', filename='featured_image/' + post.featured_image) }}" class="img-fluid card-img-top" style="max-height: 10rem;"> -->
+                                        <img src="{{ post.featured_image }}" class="img-fluid card-img-top" style="max-height: 10rem;">
                                     </div>
                                     {% endif %}
                                     <h3>
@@ -57,7 +61,7 @@
 
             <!-- サイドバー -->
             <div class="col-md-4">
-                <div class="position-sticky" style="top: 2rem;">
+                <div class="position-sticky text-white" style="top: 2rem;">
                     <!-- 検索欄 -->
                     <div class="container-fluid mb-3">
                         <form action="{{ url_for('main.search') }}" class="d-flex" method="POST">
@@ -65,24 +69,24 @@
                             
                             {{ render_field(form.searchtext,class="form-control me-2", placeholder="検索するテキスト入力")}}
                            
-                            {{ form.submit(class="btn btn-outline-light-success") }}
+                            {{ form.submit(class="text-white btn btn-outline-light") }}
                         </form>
 
                     </div>
 
                     <!-- 最新記事 -->
                     <div class="p-4">
-                        <h4 class="fst-italic">RECENT POST<span class="ms-2 fs-6">最新記事</span></h4>
+                        <h4 class="fst-italic">RECENT POST <span class="ms-2 fs-6">最新記事</span></h4>
                         <hr>
-                        <ol class="list=unstyled">
+                        <ol class="list-unstyled">
                             {% for recent_post in recent_blog_posts %}
                             <li>
-                                <a href="{{ recent_post.id }}" class="text-decoration-none">
+                                <a href="{{ url_for('main.blog_post', blog_post_id=recent_post.id) }}" class="text-decoration-none">
                                     {% if recent_post.featured_image %}
-                                    <img src="{{recent_post.featured_image }}" class="img-fluid" width="90" height="50">                                    
+                                    <!-- <img src="{{ url_for('static', filename='featured_image/' + recent_post.featured_image) }}" class="img-fluid" width="90" height="50"> -->
+                                    <img src="{{ recent_post.featured_image }}" class="img-fluid" width="90" height="50">
                                     {% endif %}
-                                    <span class="ms-2">{{recent_post.title | truncate(14) }}</span>
-                                    
+                                    <span class="ms-2">{{ recent_post.title | truncate(14) }}</span>
                                 </a>
                             </li>
                             <hr>

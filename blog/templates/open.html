@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Auto Redirect</title>
+    <link rel="stylesheet" href="/blog/static/css/style.css">
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Loading</title>
+    
+   
+</head>
+<body> 
+    <!-- ローディング画面 -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader"></div>
+        <p>Loading...</p>
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>
