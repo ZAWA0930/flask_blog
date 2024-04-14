@@ -22,6 +22,8 @@ https://drive.google.com/file/d/1bBLSYgfPdz996NKcUABwEHeWzZf4-kRs/view?usp=shari
 ・ユーザー一覧
 ・検索バー
 ・管理者限定管理ページ
+![ER](https://github.com/ZAWA0930/flask_blog/assets/93305831/c1d3ac98-fc51-4c14-bee9-dda7f8bc5d28)
+
 
 # Requirement
 
@@ -46,7 +48,11 @@ SQLAlchemy==1.4.39
 
 
 # Note
+今回、Flaskを使用して作成した理由はstreamlitでwebアプリに興味を持ちました。画像認識を使用するwebアプリを作成したいと考えたとき、pythonでできる小規模webアプリという条件にあてはまったのがFlaskでした。
+制作期間は1か月半近くかかってしまいました。
 
+
+反省点
 今回はherokuを使用してデプロイしたため、PostgreSQLを使用した。画像を投稿するには、画像リンクを使用しないといけない。
 今後の改善点としてCloudSQLやAWSからデプロイし、画像をファイルから投稿できるようにする。
 
