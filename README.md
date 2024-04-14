@@ -5,6 +5,8 @@ flaskとBootstrapを使用した簡易ブログサイトを作成しました。
 
 https://zawa093flaskapp-ae8b269555e9.herokuapp.com/
 
+
+
 # DEMO
 サイトのレイアウトは以下の画像の通りです
 
